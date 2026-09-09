@@ -275,6 +275,357 @@
   .float-actions a img{width:100%;height:100%;object-fit:cover;}
 
   [hidden]{display:none !important;}
+[hidden]{display:none !important;}
+/* =========================================
+   PREMIUM MICRO-INTERACTIONS
+   ========================================= */
+
+/* Header polish */
+header {
+  transition:
+    box-shadow .3s ease,
+    background .3s ease,
+    border-color .3s ease;
+}
+
+header.scrolled {
+  background: rgba(255,255,255,.97);
+  box-shadow: 0 8px 30px -18px rgba(36,36,36,.22);
+}
+
+/* Navigation hover indicator */
+.nav-links > a,
+.nav-dropdown > a {
+  position: relative;
+  transition: color .25s ease;
+}
+
+.nav-links > a::after,
+.nav-dropdown > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .25s ease;
+}
+
+.nav-links > a:hover::after,
+.nav-links > a.active::after,
+.nav-dropdown > a:hover::after,
+.nav-dropdown > a.active::after {
+  transform: scaleX(1);
+}
+
+/* Buttons */
+.btn {
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    background .25s ease,
+    border-color .25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 10px 24px -12px rgba(65,74,64,.45);
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 8px 20px -14px rgba(36,36,36,.35);
+}
+
+.btn svg {
+  transition: transform .25s ease;
+}
+
+.btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* Treatment cards */
+.t-card {
+  transition:
+    transform .3s ease,
+    background .3s ease,
+    box-shadow .3s ease;
+}
+
+.t-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 35px -25px rgba(36,36,36,.35);
+  position: relative;
+  z-index: 2;
+}
+
+.t-card .t-img {
+  overflow: hidden;
+}
+
+.t-card .t-img img {
+  transition: transform .5s cubic-bezier(.2,.7,.2,1);
+}
+
+.t-card:hover .t-img img {
+  transform: scale(1.045);
+}
+
+.t-card .more {
+  transition:
+    opacity .25s ease,
+    transform .25s ease,
+    color .25s ease;
+  transform: translateX(0);
+}
+
+.t-card:hover .more {
+  transform: translateX(4px);
+}
+
+/* Related treatment cards */
+.related-card {
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
+}
+
+.related-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px -24px rgba(36,36,36,.35);
+}
+
+.related-card .r-img {
+  overflow: hidden;
+}
+
+.related-card .r-img img {
+  transition: transform .5s cubic-bezier(.2,.7,.2,1);
+}
+
+.related-card:hover .r-img img {
+  transform: scale(1.035);
+}
+
+/* Clinic / photo hover */
+.photo {
+  overflow: hidden;
+}
+
+.photo img {
+  transition: transform .55s cubic-bezier(.2,.7,.2,1);
+}
+
+.photo:hover img {
+  transform: scale(1.025);
+}
+
+.photo img[alt="Dr. Balaji Jagan"] {
+  transition: transform .45s ease;
+}
+
+.photo.doctor-photo:hover img[alt="Dr. Balaji Jagan"] {
+  transform: scale(1.015);
+}
+
+/* Process cards */
+.process-grid .p-card {
+  transition: transform .3s ease;
+}
+
+.process-grid .p-card:hover {
+  transform: translateY(-4px);
+}
+
+.process-grid .p-img {
+  overflow: hidden;
+}
+
+.process-grid .p-img img {
+  transition: transform .5s cubic-bezier(.2,.7,.2,1);
+}
+
+.process-grid .p-card:hover .p-img img {
+  transform: scale(1.035);
+}
+
+/* Why choose us */
+.why-item {
+  position: relative;
+  transition:
+    transform .3s ease,
+    border-color .3s ease;
+}
+
+.why-item::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 34px;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s ease;
+}
+
+.why-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(125,139,121,.55);
+}
+
+.why-item:hover::before {
+  transform: scaleX(1);
+}
+
+/* Testimonials */
+.testi-card {
+  transition:
+    transform .3s ease,
+    border-color .3s ease,
+    background .3s ease;
+}
+
+.testi-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,.22);
+  background: rgba(255,255,255,.08);
+}
+
+/* Doctor information card */
+.doctor-card {
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px -25px rgba(36,36,36,.3);
+  border-color: rgba(125,139,121,.5);
+}
+
+/* Certifications */
+.cert-strip .cert {
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.cert-strip .cert:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px -18px rgba(36,36,36,.3);
+}
+
+/* Contact photo */
+.contact-photo {
+  overflow: hidden;
+}
+
+.contact-photo img {
+  transition: transform .5s cubic-bezier(.2,.7,.2,1);
+}
+
+.contact-photo:hover img {
+  transform: scale(1.025);
+}
+
+/* Floating WhatsApp */
+.float-actions a {
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.float-actions a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px -8px rgba(36,36,36,.42);
+}
+
+/* =========================================
+   SCROLL REVEAL
+   ========================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity .65s ease,
+    transform .65s cubic-bezier(.2,.7,.2,1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slightly staggered treatment cards */
+.t-card.reveal:nth-child(2) {
+  transition-delay: .06s;
+}
+
+.t-card.reveal:nth-child(3) {
+  transition-delay: .12s;
+}
+
+.t-card.reveal:nth-child(4) {
+  transition-delay: .18s;
+}
+
+.t-card.reveal:nth-child(5) {
+  transition-delay: .24s;
+}
+
+.t-card.reveal:nth-child(6) {
+  transition-delay: .30s;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Touch devices shouldn't have artificial hover movement */
+@media (hover: none) {
+  .t-card:hover,
+  .related-card:hover,
+  .why-item:hover,
+  .testi-card:hover,
+  .doctor-card:hover,
+  .process-grid .p-card:hover,
+  .cert-strip .cert:hover {
+    transform: none;
+  }
+
+  .photo:hover img,
+  .contact-photo:hover img {
+    transform: none;
+  }
+}
 </style>
 </head>
 <body>
@@ -868,9 +1219,94 @@
     window.location.href = 'mailto:info@drbalajijagan.com?subject='+subject+'&body='+body;
   });
 
+ /* =========================================
+   PREMIUM SCROLL & NAVIGATION EFFECTS
+   ========================================= */
+
+let premiumInteractionsInitialized = false;
+
+function initPremiumInteractions() {
+
+  /* Navbar shadow on scroll */
+  const header = document.querySelector('header');
+
+  if (header && !premiumInteractionsInitialized) {
+
+    function updateHeader() {
+      if (window.scrollY > 12) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
+  }
+
+
+  /* Scroll reveal */
+  const revealElements = document.querySelectorAll(
+    '.page section, .page-hero, .hero-copy, .hero-stats, ' +
+    '.two-col > *, .grid-head, .t-card, .process-grid .p-card, ' +
+    '.why-item, .testi-card, .cta-band, .contact-grid > *, ' +
+    '.clinic-grid .photo, .eo-card, .related-card, .doctor-card, ' +
+    '.cert-strip .cert'
+  );
+
+  revealElements.forEach((element) => {
+    element.classList.add('reveal');
+  });
+
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    }
+  );
+
+
+  document.querySelectorAll('.reveal:not(.is-visible)').forEach((element) => {
+    observer.observe(element);
+  });
+
+
+  /* Close mobile menu after navigation */
+  if (!premiumInteractionsInitialized) {
+
+    document.querySelectorAll('.mobile-panel a').forEach((link) => {
+      link.addEventListener('click', () => {
+        const mobilePanel = document.getElementById('mobilePanel');
+
+        if (mobilePanel) {
+          mobilePanel.classList.remove('open');
+        }
+      });
+    });
+
+    premiumInteractionsInitialized = true;
+  }
+}
   renderStatic();
+route();
+initPremiumInteractions();
+
+window.addEventListener('hashchange', () => {
   route();
-  window.addEventListener('hashchange', route);
+
+  setTimeout(() => {
+    initPremiumInteractions();
+  }, 50);
+});
 </script>
 <div style="text-align:center; padding:12px 20px; font-size:12px;">
   <a href="https://shriprocraft.com/" target="_blank" rel="noopener noreferrer" style="color:#777; text-decoration:none;">
